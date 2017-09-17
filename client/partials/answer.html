@@ -1,0 +1,27 @@
+<div class="container">
+  <h4 ><a style="text-decoration: underline;" href="#/dash">Home</a><span> | </span><a style="text-decoration: underline;" href="#/show/{{question._id}}">Go back to Question</a><a href="/logout" style="font-size:20px; color:lightblue; margin-left:500px;">Logout</a></h4>
+  <hr>
+  <div class="conatainer">
+    <h2>{{question.title}}</h2>
+    <h5>{{question.description}}</h5>
+  </div>
+  <hr>
+  <div class="container" ng-controller="answerController">
+
+    <p style="color:red;"ng-repeat='error in errors'>{{error}}</p>
+
+    <form ng-submit="answer_create(question._id)">
+      <label class="col-md-2" for="answer">Your Answer:</label>
+      <textarea  rows="4" cols="40" placeholder="Tell me your answer" ng-model="answer.answer"></textarea>
+      <br>
+      <br>
+      <label class="col-md-2" style="maxlength:5px;" for="support">URL to support your answer :</label>
+      <textarea name="support" rows="4" cols="40" placeholder="(optional)" ng-model="answer.support"></textarea>
+      <br>
+      <br>
+      <p><a href="#/show/{{question._id}}"><button style="margin-left:350px" type="button" name="button" class="btn btn-danger btn-s">Cancel</button></a> <button  class="btn btn-success btn-s"type="submit" name="button">submit</button></p>
+
+    </form>
+  </div>
+
+</div>

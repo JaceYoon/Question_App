@@ -1,0 +1,20 @@
+<div class="container">
+  <h4 style="text-decoration: underline;"><a style="text-decoration: underline;" href="#/dash">Home</a><a href="/logout" style=" margin-left:600px; font-size:20px; color:lightblue;">Logout</a></h4></h4>
+  <h2>New Question</h2>
+
+  <p style="color:red;"ng-repeat='error in errors'>{{error}}</p>
+  <hr>
+  <form ng-submit="create()">
+    <label for="title">Question :</label>
+    <textarea style="margin-left:15px;" name="title" rows="4" cols="40" ng-model="question.title" placeholder="What is your question?"></textarea>
+    <br>
+    <br>
+    <label for="description">Description :</label>
+    <textarea name="description" rows="4" cols="40" ng-model="question.description" placeholder="Tell me about more detail(optional)"></textarea>
+    <br>
+    <br>
+    <p><a style="margin-left:250px;" href="#/dash"><button type="button" name="button" class="btn btn-warning btn-s">Cancel</button></a>
+    <button type="submit" name="button" class="btn btn-primary btn-s">Submit</button></p>
+
+  </form>
+</div>
